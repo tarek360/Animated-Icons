@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
   private void startAnimations() {
     toolbarIcon.startAnimation();
+    bigPreviewIcon.setRepeatCount(5);
     bigPreviewIcon.startAnimation();
   }
 
