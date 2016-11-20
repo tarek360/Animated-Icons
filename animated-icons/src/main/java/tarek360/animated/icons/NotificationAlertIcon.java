@@ -70,4 +70,8 @@ public class NotificationAlertIcon extends View {
   public int getNotificationCount() {
     return drawer.getNotificationCount();
   }
+
+  public void setRepeatCount(int repeatCount) {
+    drawer.setRepeatCount(repeatCount);
+  }
 }
