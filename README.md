@@ -2,6 +2,9 @@
 
 Android Animated Icons
 
+
+### [Download apk sample](https://github.com/tarek360/Animated-Icons/raw/master/sample.apk)
+
 ### NotificationAlertIcon
 
 ![](https://github.com/tarek360/Animated-Icons/raw/master/gif/notificationAlertIcon.gif)
@@ -27,7 +30,7 @@ Add this to your module `build.gradle` file:
 ```gradle
 dependencies {
   ...
-   compile "com.github.tarek360:Animated-Icons:1.0.0"
+   compile "com.github.tarek360:Animated-Icons:1.0.1"
 }
 ```
 
