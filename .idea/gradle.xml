@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/animated-icons" />
+            <option value="$PROJECT_DIR$/animated-icons-library" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>

@@ -5,7 +5,6 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.graphics.PointF;
 import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.support.annotation.ColorInt;
@@ -130,7 +129,7 @@ class Drawer {
     });
 
     valueAnimator.setInterpolator(new DecelerateInterpolator());
-    valueAnimator.setDuration(4100);
+    valueAnimator.setDuration(4000);
     valueAnimator.start();
   }
 
@@ -145,7 +144,7 @@ class Drawer {
     });
 
     valueAnimator.setInterpolator(new DecelerateInterpolator());
-    valueAnimator.setDuration(4100);
+    valueAnimator.setDuration(4000);
     valueAnimator.start();
   }
 
@@ -173,50 +172,43 @@ class Drawer {
     canvas.translate(resizedFrame.left, resizedFrame.top);
     canvas.scale(resizedFrame.width() / 180f, resizedFrame.height() / 180f);
 
-    // bell.svg Group
-    {
-      // Bell
-      canvas.save();
-      canvas.translate(81.49f, 46.51f);
-      canvas.rotate(-bellRotation);
+    // Bell
+    canvas.save();
+    canvas.translate(81.49f, 46.51f);
+    canvas.rotate(-bellRotation);
 
-      paint.setColor(bellColor);
-      canvas.drawPath(bellPath, paint);
-      canvas.restore();
+    paint.setColor(bellColor);
+    canvas.drawPath(bellPath, paint);
+    canvas.restore();
 
-      // BellTear
-      canvas.save();
-      canvas.translate(81.91f, 58.62f);
-      canvas.rotate(-tearRotation);
+    // BellTear
+    canvas.save();
+    canvas.translate(81.91f, 58.62f);
+    canvas.rotate(-tearRotation);
 
-      canvas.drawPath(bellTearPath, paint);
-      canvas.restore();
-    }
+    canvas.drawPath(bellTearPath, paint);
+    canvas.restore();
 
-    // CounterGroup
-    {
-      canvas.save();
-      canvas.translate(121.5f, 66.5f);
-      canvas.scale(counterScale, counterScale);
+    // CounterBackground
+    canvas.save();
+    canvas.translate(121.5f, 66.5f);
+    canvas.scale(counterScale, counterScale);
 
-      paint.setColor(counterBackgroundColor);
-      canvas.drawPath(counterCircleBackgroundPath, paint);
+    paint.setColor(counterBackgroundColor);
+    canvas.drawPath(counterCircleBackgroundPath, paint);
 
-      counterTextPaint.setColor(countColor);
+    counterTextPaint.setColor(countColor);
 
-      // CountTextRect
+    // CountTextRect
+    StaticLayout countTextRectStaticLayout =
+        new StaticLayout(String.valueOf(notificationCount), counterTextPaint,
+            (int) countTextRectRect.width(), Layout.Alignment.ALIGN_CENTER, 1f, 0f, false);
+    canvas.save();
+    canvas.clipRect(countTextRectRect);
+    canvas.translate(countTextRectRect.left, countTextRectRect.top
+        + (countTextRectRect.height() - countTextRectStaticLayout.getHeight()) / 2f);
 
-      StaticLayout countTextRectStaticLayout =
-          new StaticLayout(String.valueOf(notificationCount), counterTextPaint,
-              (int) countTextRectRect.width(), Layout.Alignment.ALIGN_CENTER, 1f, 0f, false);
-
-      canvas.save();
-      canvas.clipRect(countTextRectRect);
-      canvas.translate(countTextRectRect.left, countTextRectRect.top
-          + (countTextRectRect.height() - countTextRectStaticLayout.getHeight()) / 2f);
-
-      countTextRectStaticLayout.draw(canvas);
-    }
+    countTextRectStaticLayout.draw(canvas);
 
     canvas.restore();
   }
@@ -226,11 +218,8 @@ class Drawer {
       return rect;
     }
 
-    PointF ratio = new PointF();
-    ratio.x = Math.abs(target.width() / rect.width());
-    ratio.y = Math.abs(target.height() / rect.height());
-
-    float scale = Math.min(ratio.x, ratio.y);
+    float scale = Math.min(Math.abs(target.width() / rect.width()),
+        Math.abs(target.height() / rect.height()));
 
     RectF result =
         new RectF(target.centerX(), target.centerY(), target.centerX(), target.centerY());
