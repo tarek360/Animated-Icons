@@ -240,6 +240,10 @@ class Drawer {
     invalidateListener.invalidate();
   }
 
+  int getNotificationCount() {
+    return notificationCount;
+  }
+
   interface InvalidateListener {
     void invalidate();
   }
