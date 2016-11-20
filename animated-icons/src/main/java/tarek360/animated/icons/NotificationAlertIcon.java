@@ -67,4 +67,7 @@ public class NotificationAlertIcon extends View {
   public void setNotificationCount(int count) {
     drawer.setNotificationCount(count);
   }
+  public int getNotificationCount() {
+    return drawer.getNotificationCount();
+  }
 }
