@@ -13,7 +13,11 @@ Android Animated Icons
  icon.setNotificationCount(3);
  // Set custom colors: bellColor, countColor, counterBackgroundColor
  icon.setColors(Color.WHITE  , Color.WHITE, Color.RED);
+ icon.setRepeatCount(5);
  icon.startAnimation();
+ ...
+ // Get notification count whenever you want
+ icon.getNotificationCount();
 ```
 
 ```xml
