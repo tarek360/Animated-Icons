@@ -7,7 +7,7 @@ Android Animated Icons
 
 ### NotificationAlertIcon
 
-![](https://github.com/tarek360/Animated-Icons/raw/master/gif/notificationAlertIcon.gif)
+![](https://github.com/tarek360/Animated-Icons/raw/master/gif/notification_alert_icon.gif)
 
 ```java
  icon.setNotificationCount(3);
