@@ -30,6 +30,7 @@ class Drawer {
   private RectF iconBounds;
   private int counterBackgroundColor;
   private int countColor;
+  private int repeatCount = 0;
   private int bellColor;
   private Path bellPath;
   private Path bellTearPath;
@@ -130,6 +131,7 @@ class Drawer {
 
     valueAnimator.setInterpolator(new DecelerateInterpolator());
     valueAnimator.setDuration(4000);
+    valueAnimator.setRepeatCount(repeatCount);
     valueAnimator.start();
   }
 
@@ -145,6 +147,7 @@ class Drawer {
 
     valueAnimator.setInterpolator(new DecelerateInterpolator());
     valueAnimator.setDuration(4000);
+    valueAnimator.setRepeatCount(repeatCount);
     valueAnimator.start();
   }
 
@@ -238,6 +241,14 @@ class Drawer {
   void setNotificationCount(int count) {
     this.notificationCount = count;
     invalidateListener.invalidate();
+  }
+
+  int getNotificationCount() {
+    return notificationCount;
+  }
+
+  void setRepeatCount(int repeatCount) {
+    this.repeatCount=repeatCount;
   }
 
   interface InvalidateListener {
