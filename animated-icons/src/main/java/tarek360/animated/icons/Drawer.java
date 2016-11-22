@@ -108,6 +108,7 @@ class Drawer {
   void startAnimation() {
     reset();
     animateBell();
+    animateCounter();
   }
 
   private void animateBell() {
@@ -121,10 +122,10 @@ class Drawer {
           isTearAnimated = true;
         }
 
-        if (notificationCount > 0 && !isCounterAnimated && animation.getCurrentPlayTime() > 1000) {
-          animateCounter();
-          isCounterAnimated = true;
-        }
+        //if (notificationCount > 0 && !isCounterAnimated && animation.getCurrentPlayTime() > 1000) {
+        //  animateCounter();
+        //  isCounterAnimated = true;
+        //}
         invalidateListener.invalidate();
       }
     });
@@ -153,7 +154,7 @@ class Drawer {
 
   private void animateCounter() {
 
-    ValueAnimator valueAnimator = ValueAnimator.ofFloat(0.7f, 1.2f, 1.1f, 1.0f);
+    ValueAnimator valueAnimator = ValueAnimator.ofFloat(0.5f, 1.2f, 1.1f, 1.0f);
     valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
       @Override public void onAnimationUpdate(ValueAnimator animation) {
         counterScale = (float) animation.getAnimatedValue();
@@ -163,7 +164,8 @@ class Drawer {
     });
 
     valueAnimator.setInterpolator(new DecelerateInterpolator());
-    valueAnimator.setDuration(1100);
+    valueAnimator.setStartDelay(1000);
+    valueAnimator.setDuration(1300);
     valueAnimator.start();
   }
 
@@ -248,7 +250,7 @@ class Drawer {
   }
 
   void setRepeatCount(int repeatCount) {
-    this.repeatCount=repeatCount;
+    this.repeatCount = repeatCount;
   }
 
   interface InvalidateListener {

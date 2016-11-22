@@ -1,4 +1,5 @@
-# Animated-Icons 
+# Animated-Icons [![Release](https://jitpack.io/v/tarek360/Animated-Icons.svg)](https://jitpack.io/#tarek360/Animated-Icons)
+
 Android Animated Icons (more icons is coming..)
 
 ## Vote Up on:
@@ -36,7 +37,7 @@ Add this to your module `build.gradle` file:
 ```gradle
 dependencies {
   ...
-   compile "com.github.tarek360:Animated-Icons:1.0.0"
+   compile "com.github.tarek360:Animated-Icons:1.0.1"
 }
 ```
 

@@ -28,12 +28,14 @@ public class MainActivity extends AppCompatActivity {
     bigPreviewIcon.setColors(ContextCompat.getColor(this, R.color.colorAccent), Color.WHITE,
         ContextCompat.getColor(this, R.color.colorPrimary));
 
+    // Repeat animation for 4 times
+    //bigPreviewIcon.setRepeatCount(4);
+
     startAnimations();
   }
 
   private void startAnimations() {
     toolbarIcon.startAnimation();
-    bigPreviewIcon.setRepeatCount(5);
     bigPreviewIcon.startAnimation();
   }
 
