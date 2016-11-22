@@ -1,6 +1,9 @@
 # Animated-Icons [![Release](https://jitpack.io/v/tarek360/Animated-Icons.svg)](https://jitpack.io/#tarek360/Animated-Icons)
 
-Android Animated Icons
+Android Animated Icons (more icons is comming..)
+
+## Vote Up on:
+[![](https://github.com/tarek360/Animated-Icons/raw/master/gif/material_up.png)](https://material.uplabs.com/posts/animated-icons-library)
 
 
 ### [Download apk sample](https://github.com/tarek360/Animated-Icons/raw/master/sample.apk)
