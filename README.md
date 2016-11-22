@@ -1,16 +1,16 @@
 # Animated-Icons [![Release](https://jitpack.io/v/tarek360/Animated-Icons.svg)](https://jitpack.io/#tarek360/Animated-Icons)
 
-Android Animated Icons (more icons is comming..)
+Android Animated Icons (more icons is coming..)
 
 ## Vote Up on:
-[![](https://github.com/tarek360/Animated-Icons/raw/master/gif/material_up.png)](https://material.uplabs.com/posts/animated-icons-library)
+[![](https://github.com/tarek360/Animated-Icons/raw/master/images/material_up.png)](https://material.uplabs.com/posts/animated-icons-library)
 
 
 ### [Download apk sample](https://github.com/tarek360/Animated-Icons/raw/master/sample.apk)
 
 ### NotificationAlertIcon
 
-![](https://github.com/tarek360/Animated-Icons/raw/master/gif/notification_alert_icon.gif)
+![](https://github.com/tarek360/Animated-Icons/raw/master/images/notification_alert_icon.gif)
 
 ```java
  icon.setNotificationCount(3);
