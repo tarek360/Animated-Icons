@@ -1,16 +1,10 @@
 # Animated-Icons [![Release](https://jitpack.io/v/tarek360/Animated-Icons.svg)](https://jitpack.io/#tarek360/Animated-Icons)
 
-Android Animated Icons (more icons is coming..)
+![](https://github.com/tarek360/Animated-Icons/raw/master/images/animated_icons.gif)
 
-## Vote Up on:
-[![](https://github.com/tarek360/Animated-Icons/raw/master/images/material_up.png)](https://material.uplabs.com/posts/animated-icons-library)
-
+And more animated icons is coming..
 
 ### [Download apk sample](https://github.com/tarek360/Animated-Icons/raw/master/sample.apk)
-
-### NotificationAlertIcon
-
-![](https://github.com/tarek360/Animated-Icons/raw/master/images/notification_alert_icon.gif)
 
 ```java
  icon.setNotificationCount(3);
@@ -37,7 +31,7 @@ Add this to your module `build.gradle` file:
 ```gradle
 dependencies {
   ...
-   compile "com.github.tarek360:Animated-Icons:1.0.1"
+   compile "com.github.tarek360:Animated-Icons:1.2.0"
 }
 ```
 
@@ -51,9 +45,8 @@ allprojects {
 }
 ```
 
-## Inspired by 
-https://dribbble.com/shots/2604805-Notification-Icon-Animation
-
+## Vote Up on:
+[![](https://github.com/tarek360/Animated-Icons/raw/master/images/material_up.png)](https://material.uplabs.com/posts/animated-icons-library)
 
 ## License
 

@@ -1,9 +1,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.tarek360.animated_icons_sample.MainActivity">
-  <item android:id="@+id/action_settings"
-      android:title="@string/action_settings"
-      android:orderInCategory="100"
-      app:showAsAction="never"/>
+    tools:context=".MainActivity">
+  <item
+      android:id="@+id/search"
+      android:icon="@android:drawable/ic_menu_search"
+      android:title="@string/search_title"
+      app:actionViewClass="android.support.v7.widget.SearchView"
+      app:showAsAction="collapseActionView|ifRoom" />
+
+  <item
+      android:id="@+id/action_github"
+      android:title="@string/action_github"
+      app:showAsAction="never" />
 </menu>

@@ -1,4 +1,4 @@
-package tarek360.animated.icons;
+package tarek360.animated.icons.drawers;
 
 import android.animation.ValueAnimator;
 import android.graphics.Canvas;
@@ -13,7 +13,7 @@ import android.text.StaticLayout;
 import android.text.TextPaint;
 import android.view.animation.DecelerateInterpolator;
 
-class Drawer {
+public class NotificationAlertDrawer {
 
   private final InvalidateListener invalidateListener;
   private RectF viewBounds;
@@ -23,7 +23,7 @@ class Drawer {
   private float bellRotation = 0;
   private float tearRotation = 0;
   private float counterScale = 0;
-  private int notificationCount = 0;
+  private int notificationCount = 1;
   private boolean isTearAnimated;
   private boolean isCounterAnimated;
 
@@ -37,7 +37,7 @@ class Drawer {
   private Path counterCircleBackgroundPath;
   private RectF countTextRectRect;
 
-  Drawer(InvalidateListener invalidateListener) {
+  public NotificationAlertDrawer(InvalidateListener invalidateListener) {
     this.invalidateListener = invalidateListener;
     init();
   }
@@ -89,7 +89,7 @@ class Drawer {
     countTextRectRect = new RectF(-42.5f, -42.5f, 42.5f, 42.5f);
   }
 
-  void onSizeChanged(int w, int h, int oldw, int oldh) {
+  public void onSizeChanged(int w, int h, int oldw, int oldh) {
     viewBounds.right = w;
     viewBounds.bottom = h;
   }
@@ -105,7 +105,7 @@ class Drawer {
     invalidateListener.invalidate();
   }
 
-  void startAnimation() {
+  public void startAnimation() {
     reset();
     animateBell();
   }
@@ -167,7 +167,7 @@ class Drawer {
     valueAnimator.start();
   }
 
-  void drawIcon(Canvas canvas) {
+  public void drawIcon(Canvas canvas) {
 
     // Resize to Target Frame
     canvas.save();
@@ -230,7 +230,7 @@ class Drawer {
     return result;
   }
 
-  void setColors(@ColorInt int bellColor, @ColorInt int countColor,
+  public void setColors(@ColorInt int bellColor, @ColorInt int countColor,
       @ColorInt int counterBackgroundColor) {
     this.bellColor = bellColor;
     this.countColor = countColor;
@@ -238,20 +238,20 @@ class Drawer {
     invalidateListener.invalidate();
   }
 
-  void setNotificationCount(int count) {
+  public int getNotificationCount() {
+    return notificationCount;
+  }
+
+  public void setNotificationCount(int count) {
     this.notificationCount = count;
     invalidateListener.invalidate();
   }
 
-  int getNotificationCount() {
-    return notificationCount;
+  public void setRepeatCount(int repeatCount) {
+    this.repeatCount = repeatCount;
   }
 
-  void setRepeatCount(int repeatCount) {
-    this.repeatCount=repeatCount;
-  }
-
-  interface InvalidateListener {
+  public interface InvalidateListener {
     void invalidate();
   }
 }

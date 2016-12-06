@@ -1,1 +1,1 @@
--keep public class **NotificationAlertIcon {*;}
+#-keep public class **AnimatedIcon {*;}
