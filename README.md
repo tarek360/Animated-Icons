@@ -6,7 +6,7 @@ And more animated icons is coming..
 
 ### [Download apk sample](https://github.com/tarek360/Animated-Icons/raw/master/sample.apk)
 
-### usage
+### Usage
 
 ```xml
   <tarek360.animated.icons.AnimatedIconView
@@ -16,11 +16,11 @@ And more animated icons is coming..
 ```
 
 ```java
-    animatedIconView.setAnimatedIcon(IconFactory.iconNotificationAlert().setNotificationCount(2));
+   animatedIconView.setAnimatedIcon(IconFactory.iconSettings());
 ```
 
 ```java
-    animatedIconView.startAnimation();
+   animatedIconView.startAnimation();
 ```
 
 
