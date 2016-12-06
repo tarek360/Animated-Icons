@@ -6,23 +6,24 @@ And more animated icons is coming..
 
 ### [Download apk sample](https://github.com/tarek360/Animated-Icons/raw/master/sample.apk)
 
-```java
- icon.setNotificationCount(3);
- // Set custom colors: bellColor, countColor, counterBackgroundColor
- icon.setColors(Color.WHITE  , Color.WHITE, Color.RED);
- icon.setRepeatCount(5);
- icon.startAnimation();
- ...
- // Get notification count whenever you want
- icon.getNotificationCount();
-```
+### usage
 
 ```xml
- <tarek360.animated.icons.NotificationAlertIcon
-     android:id="@+id/icon"
+  <tarek360.animated.icons.AnimatedIconView
+     android:id="@+id/animatedIconView"
      android:layout_width="48dp"
      android:layout_height="48dp"/>
 ```
+
+```java
+    animatedIconView.setAnimatedIcon(IconFactory.iconNotificationAlert().setNotificationCount(2));
+```
+
+```java
+    animatedIconView.startAnimation();
+```
+
+
 
 
 ### Installation

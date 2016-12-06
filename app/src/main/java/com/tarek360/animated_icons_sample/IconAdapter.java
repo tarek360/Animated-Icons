@@ -11,8 +11,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
-import tarek360.animated.icons.AnimatedIconView;
 import tarek360.animated.icons.drawables.AnimatedIcon;
+import tarek360.animated.icons.AnimatedIconView;
 
 public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
 
@@ -55,10 +55,7 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
       animatedIconView = (AnimatedIconView) itemView.findViewById(R.id.icon);
       animatedIconView.setOnClickListener(new View.OnClickListener() {
         @Override public void onClick(View v) {
-          //animatedIconView.startAnimation();
-          for (AnimatedIcon a : animatedIcons) {
-            a.startAnimation();
-          }
+          animatedIconView.startAnimation();
         }
       });
     }
