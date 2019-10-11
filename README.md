@@ -32,7 +32,7 @@ Add this to your module `build.gradle` file:
 ```gradle
 dependencies {
   ...
-   compile "com.github.tarek360:Animated-Icons:1.2.0"
+   implementation "com.github.tarek360:Animated-Icons:1.2.0"
 }
 ```
 
